@@ -1,0 +1,39 @@
+buildscript {
+    ext.kotlin_version = '1.3.21'
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'groovy'
+
+compileKotlin {
+    kotlinOptions {
+        apiVersion = "1.2"
+        jvmTarget = "1.6"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.6"
+}
+
+dependencies {
+    compile gradleApi()
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    compileOnly 'com.android.tools.build:gradle:3.3.2'
+    compile 'org.javassist:javassist:3.24.1-GA'
+
+    compile "me.yanglw:android-sting-annotation:1.0.0"
+}
+
+if (hasProperty('BINTRAY_API_KEY')) {
+    apply from: '../gradle-mvn-jcenter.gradle'
+}

@@ -1,0 +1,9 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+if (hasProperty('BINTRAY_API_KEY'))
+    apply from:'../gradle-mvn-jcenter.gradle'
