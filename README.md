@@ -10,6 +10,8 @@ Sting 可以实现 `OnClickListener.OnClick` 方法的防抖，也可以实现�
 
 本库已经上传至 jcenter 仓库中，添加 jcenter 仓库便可以通过远程依赖的方式使用本库。
 
+![GitHub release](https://img.shields.io/github/release/yanglw/android-sting.svg?label=version)
+
 ### 引入插件
 ```groovy
 buildscript {
