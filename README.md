@@ -119,3 +119,7 @@ public class MainActivity extends Activity {
 
   单位为毫秒，默认值使用 `anno.interval` 中配置的值。
 
+
+## License
+
+![GitHub](https://img.shields.io/github/license/yanglw/android-sting.svg)
